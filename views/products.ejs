@@ -1,0 +1,30 @@
+<%- include ("./partials/header") %>
+
+
+<div class="container">
+    <header class = "jumbotron">
+        <div>
+            <h1>Welcome to AmKart!</h1>            
+            <p>Freshness you can taste. Values you can trust.</p>
+        </div>
+    </header>
+
+<div class="container">
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    <% data.forEach(function(item){ %>
+        <div class= "col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= item.image %>">
+                <div class="caption">
+                    <h4> <%= item.product_name %>  </h4>
+                    <h3> ₹ <%= item.cost %> </h3>
+                    <a href="/<%=item.category%>/<%=item.product_id%>" class= "btn btn-primary">View More Info</a>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+</div>
+
+<%- include ("./partials/footer") %>

@@ -1,0 +1,31 @@
+<%- include ("./partials/header") %>
+
+    <div class="container">
+    <div class="row">
+     <div class="col-md-6">
+       <div class="thumbnail">
+           <img class= "img-responsive" src="<%= data.image %>">
+           <div class="caption-full">
+               <h4 class="pull-right">Rs <%= data.cost %></h4>
+               <h4><a><%= data.product_name %></a></h4>
+           </div>
+       </div>
+     </div>
+     <div class="col-md-6">
+       <div class="list-group">
+           <li class="list-group-item active">Description
+              <p><%=data.description%></p> 
+           </li>
+
+           <li class="list-group-item"><%=data.stock%> Available</li>
+           <li class="list-group-item">Category: <%=data.category%></li>
+       </div>
+       <div>
+        <a href="#" class="btn btn-success btn-lg"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+       </div>
+     </div>
+   </div> 
+   </div>
+ 
+
+<%- include ("./partials/footer") %>
